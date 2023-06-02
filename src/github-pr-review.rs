@@ -33,7 +33,7 @@ pub async fn run() -> anyhow::Result<()> {
     let repo = env::var("github_repo").unwrap_or("test".to_string());
     let trigger_phrase = env::var("trigger_phrase").unwrap_or("flows review".to_string());
     let key_name = env::var("openai_key_name");
-    log::info!("key_name:" + key_name);
+    log::info!("key_name:?", key_name);
 
     let events = vec!["pull_request", "issue_comment"];
     println!("MAGIC");
