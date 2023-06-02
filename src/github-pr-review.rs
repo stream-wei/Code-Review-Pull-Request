@@ -29,7 +29,8 @@ pub async fn run() -> anyhow::Result<()> {
     dotenv().ok();
     logger::init();
     log::debug!("Running function at github-pr-review/main");
-
+    log::debug!("weixi test");
+    log::info!("weixi test");
     let owner = env::var("github_owner").unwrap_or("juntao".to_string());
     let repo = env::var("github_repo").unwrap_or("test".to_string());
     let trigger_phrase = env::var("trigger_phrase").unwrap_or("flows review".to_string());
